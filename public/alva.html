@@ -1,0 +1,530 @@
+<!-- inputs 
+  <logo_url>https://tailwindui.com/img/logos/mark.svg</logo_url>
+  <business_name>Alva</business_name>
+  <business_description>Alva is an AI platform that helps knowledge-intensive companies create industry thought leadership content at scale. It is solving the problem of general-purpose LLMs being unable to produce complex, industry-specific content. A very simple landing page with great design</business_description>
+  <brand_voice>Bold, Friendly, Informative</brand_voice>
+  light, dark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, 
+
+  -->
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alva - AI-Powered Thought Leadership Content Creation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.1.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</html>
+<style>
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(var(--scroll-width, -100%));
+        }
+    }
+
+    @keyframes Wiggle {
+        0% {
+            transform: rotate(-15deg);
+        }
+
+        50% {
+            transform: rotate(-9deg);
+        }
+
+        100% {
+            transform: rotate(-15deg);
+        }
+    }
+
+    .wiggle {
+        animation: Wiggle 1.5s linear infinite;
+    }
+</style>
+</head>
+
+<body>
+    <div class="w-screen bg-base">
+        <!-- Navbar -->
+        <header id="navbar" class="mx-4 bg-base-100">
+            <nav class="navbar max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex-1">
+                    <a href="#" class="btn btn-ghost normal-case text-xl">
+                        <span class="sr-only">Alva</span>
+                        <img class="h-8 w-auto" src="alva_logo.webp" alt="Alva Logo">
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a href="#features" class="text-base-content">Features</a></li>
+                        <li><a href="#" class="text-base-content">Pricing</a></li>
+                        <li><a href="#about" class="text-base-content">About</a></li>
+                    </ul>
+                </div>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="flex-none lg:hidden">
+                    <label for="my-drawer" class="btn btn-square btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            class="inline-block w-5 h-5 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </label>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Mobile menu drawer -->
+        <div class="drawer drawer-end">
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-side z-[1000]">
+                <label for="my-drawer" class="drawer-overlay"></label>
+                <ul class="menu p-4 w-80 h-full bg-base-100 text-base-content">
+                    <li><label for="my-drawer" class="drawer-button"><a href="#features">Features</a></label></li>
+                    <li><label for="my-drawer" class="drawer-button"><a href="#">Pricing</a></label></li>
+                    <li><label for="my-drawer" class="drawer-button"><a href="#about">About</a></label></li>
+                    <li><label for="my-drawer" class="drawer-button"><a href="#contact" class="btn btn-primary mt-4">Get
+                                Started</a></label></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <div id="hero" class="hero bg-base-100 h-full">
+            <div class="hero-content w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col items-center justify-between w-full space-y-8">
+                    <div class="w-full flex justify-start">
+                        <div class="relative left-2 wiggle transform -rotate-12">
+                            <svg id="Capa_1" class="relative w-36 h-36" viewBox="0 0 511.026 511.026"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <g>
+                                        <path
+                                            d="m255.835 6.622c-86.288-.113-156.599 70.103-156.598 156.391.001 57.362 30.889 107.503 76.936 134.717 8.177 4.833 13.126 13.689 13.126 23.187v38.092c1.514-.633 3.174-.984 4.917-.984h122.822c1.743 0 3.403.352 4.917.984v-38.094c0-9.61 5.134-18.44 13.398-23.347 45.897-27.251 76.664-77.307 76.664-134.558 0-86.301-69.906-156.275-156.182-156.388z"
+                                            fill="#ffe07d" />
+                                        <g>
+                                            <path
+                                                d="m230.632 320.918c0-9.498-4.949-18.355-13.125-23.187-46.047-27.214-76.936-77.355-76.936-134.717-.001-79.226 59.273-144.893 135.762-155.027-6.708-.887-13.549-1.356-20.498-1.365-86.288-.113-156.599 70.103-156.598 156.391.001 57.362 30.889 107.503 76.936 134.717 8.177 4.833 13.126 13.689 13.126 23.187v38.092c1.513-.633 3.174-.984 4.917-.984h36.416z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m364.724 132.391c-8.116-30.245-28.967-55.533-57.207-69.38-3.719-1.824-5.256-6.317-3.432-10.036 1.823-3.719 6.318-5.255 10.036-3.432 32.128 15.753 55.853 44.534 65.091 78.96 1.074 4-1.299 8.114-5.3 9.188-3.998 1.073-8.114-1.297-9.188-5.3z"
+                                                fill="#ffeac8" />
+                                        </g>
+                                        <path
+                                            d="m225.341 467.843v5.495c0 16.658 13.629 30.287 30.286 30.287 16.657 0 30.286-13.629 30.286-30.287v-5.495z"
+                                            fill="#8479c2" />
+                                        <path
+                                            d="m252.452 473.337v-5.495h-27.112v5.495c0 16.658 13.629 30.287 30.286 30.287 4.866 0 9.47-1.17 13.556-3.232-9.897-4.997-16.73-15.264-16.73-27.055z"
+                                            fill="#6e60b8" />
+                                        <g>
+                                            <path
+                                                d="m62.859 166.508h-25.8c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5h25.8c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m70.223 118.914-24.122-9.155c-3.873-1.47-5.821-5.801-4.351-9.673s5.8-5.819 9.673-4.351l24.122 9.155c3.873 1.47 5.821 5.801 4.351 9.673-1.469 3.87-5.797 5.82-9.673 4.351z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m41.75 217.93c-1.47-3.873.479-8.204 4.351-9.673l24.122-9.155c3.871-1.469 8.203.478 9.673 4.351s-.479 8.204-4.351 9.673l-24.122 9.155c-3.874 1.469-8.203-.479-9.673-4.351z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m474.195 166.508h-25.801c-4.142 0-7.5-3.358-7.5-7.5s3.358-7.5 7.5-7.5h25.801c4.142 0 7.5 3.358 7.5 7.5s-3.358 7.5-7.5 7.5z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m431.358 114.563c-1.47-3.873.479-8.204 4.351-9.673l24.122-9.155c3.871-1.468 8.203.478 9.673 4.351s-.479 8.204-4.351 9.673l-24.122 9.155c-3.873 1.469-8.203-.479-9.673-4.351z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <g>
+                                            <path
+                                                d="m459.832 222.281-24.122-9.155c-3.873-1.47-5.821-5.801-4.351-9.673s5.8-5.82 9.673-4.351l24.122 9.155c3.873 1.47 5.821 5.801 4.351 9.673-1.47 3.87-5.797 5.82-9.673 4.351z"
+                                                fill="#ffc250" />
+                                        </g>
+                                        <path
+                                            d="m307.044 430.987h-102.834c-7.176 0-13.014 5.838-13.014 13.014v11.078c0 7.176 5.838 13.014 13.014 13.014h102.833c7.176 0 13.014-5.838 13.014-13.014v-11.078c.001-7.176-5.837-13.014-13.013-13.014z"
+                                            fill="#efecef" />
+                                        <path
+                                            d="m307.044 449.54h-102.834c-5.877 0-10.851-3.917-12.461-9.276-.356 1.185-.553 2.438-.553 3.737v11.078c0 7.176 5.838 13.014 13.014 13.014h102.833c7.176 0 13.014-5.838 13.014-13.014v-11.078c0-1.299-.197-2.552-.553-3.737-1.61 5.358-6.584 9.276-12.46 9.276z"
+                                            fill="#e2dfe2" />
+                                        <path
+                                            d="m317.038 394.381h-122.822c-7.176 0-13.014 5.838-13.014 13.014v11.078c0 7.176 5.838 13.014 13.014 13.014h122.822c7.176 0 13.014-5.838 13.014-13.014v-11.078c0-7.176-5.838-13.014-13.014-13.014z"
+                                            fill="#efecef" />
+                                        <path
+                                            d="m317.038 412.934h-122.822c-5.876 0-10.85-3.917-12.461-9.277-.356 1.185-.553 2.438-.553 3.737v11.078c0 7.176 5.838 13.014 13.014 13.014h122.822c7.176 0 13.014-5.838 13.014-13.014v-11.078c0-1.299-.197-2.552-.553-3.737-1.61 5.36-6.584 9.277-12.461 9.277z"
+                                            fill="#e2dfe2" />
+                                        <path
+                                            d="m317.038 357.775h-122.822c-7.176 0-13.014 5.838-13.014 13.014v11.078c0 7.176 5.838 13.014 13.014 13.014h122.822c7.176 0 13.014-5.838 13.014-13.014v-11.078c0-7.176-5.838-13.014-13.014-13.014z"
+                                            fill="#efecef" />
+                                        <path
+                                            d="m317.038 376.328h-122.822c-5.876 0-10.85-3.917-12.461-9.276-.356 1.185-.553 2.438-.553 3.737v11.078c0 7.176 5.838 13.014 13.014 13.014h122.822c7.176 0 13.014-5.838 13.014-13.014v-11.078c0-1.299-.197-2.552-.553-3.737-1.61 5.359-6.584 9.276-12.461 9.276z"
+                                            fill="#e2dfe2" />
+                                    </g>
+                                    <g>
+                                        <path
+                                            d="m313.891 49.445c-3.72-1.824-8.213-.287-10.036 3.432s-.287 8.212 3.433 10.036c28.24 13.848 49.092 39.136 57.207 69.38 1.075 4.004 5.192 6.374 9.188 5.3 4.001-1.073 6.374-5.187 5.301-9.188-9.239-34.427-32.965-63.207-65.093-78.96z" />
+                                        <path
+                                            d="m70.13 158.91c0-4.142-3.357-7.5-7.5-7.5h-25.8c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h25.8c4.143 0 7.5-3.358 7.5-7.5z" />
+                                        <path
+                                            d="m75.316 104.791-24.122-9.155c-3.87-1.468-8.203.478-9.673 4.351s.478 8.204 4.351 9.673l24.122 9.155c3.878 1.47 8.205-.482 9.673-4.351 1.469-3.872-.478-8.203-4.351-9.673z" />
+                                        <path
+                                            d="m69.994 199.003-24.122 9.155c-3.873 1.47-5.82 5.801-4.351 9.673 1.468 3.871 5.796 5.821 9.673 4.351l24.122-9.155c3.873-1.47 5.82-5.801 4.351-9.673-1.469-3.873-5.801-5.819-9.673-4.351z" />
+                                        <path
+                                            d="m473.966 151.41h-25.801c-4.143 0-7.5 3.358-7.5 7.5s3.357 7.5 7.5 7.5h25.801c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5z" />
+                                        <path
+                                            d="m440.803 118.816 24.122-9.155c3.873-1.47 5.82-5.801 4.351-9.673-1.469-3.874-5.802-5.819-9.673-4.351l-24.122 9.155c-3.873 1.47-5.82 5.801-4.351 9.673 1.468 3.87 5.796 5.82 9.673 4.351z" />
+                                        <path
+                                            d="m464.925 208.158-24.122-9.155c-3.871-1.468-8.204.478-9.673 4.351-1.47 3.873.478 8.204 4.351 9.673l24.122 9.155c3.878 1.47 8.205-.482 9.673-4.351 1.47-3.872-.478-8.203-4.351-9.673z" />
+                                        <path
+                                            d="m272.069 14.955c67.733 7.543 121.524 59.964 130.812 127.477.562 4.089 4.329 6.972 8.452 6.408 4.104-.564 6.972-4.349 6.407-8.452-4.92-35.774-21.929-69.43-47.892-94.768-26.007-25.382-60.143-41.566-96.119-45.573-4.118-.456-7.826 2.507-8.284 6.624s2.507 7.825 6.624 8.284z" />
+                                        <path
+                                            d="m411.831 168.937c-4.108-.347-7.758 2.706-8.111 6.833-4.076 47.661-31.15 90.746-72.424 115.251-10.528 6.251-17.069 17.668-17.069 29.796v29.609h-31.74v-59.621c0-3.444 1.16-6.842 3.266-9.568l10.733-13.896c4.123-5.338 6.394-11.993 6.394-18.738v-54.229c4.141-.002 7.496-3.359 7.496-7.5s-3.355-7.498-7.496-7.5v-.818c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v.817h-64.96v-.817c0-4.142-3.357-7.5-7.5-7.5s-7.5 3.358-7.5 7.5v.817c-4.141.002-7.497 3.359-7.497 7.5s3.356 7.498 7.497 7.5v54.229c0 6.745 2.271 13.4 6.394 18.738l10.733 13.895c2.105 2.727 3.266 6.125 3.266 9.569v59.621h-31.74v-29.608c0-12.157-6.441-23.516-16.81-29.644-45.184-26.703-73.252-75.85-73.253-128.261-.001-75.905 56.844-139.51 132.226-147.951 4.116-.461 7.079-4.172 6.618-8.288s-4.159-7.081-8.288-6.619c-39.746 4.451-76.479 23.379-103.432 53.298-27.164 30.154-42.125 69.063-42.124 109.56.002 59.772 32.112 112.505 80.62 141.174 5.824 3.442 9.442 9.853 9.442 16.73v33.893c-4.765 3.711-7.848 9.486-7.848 15.979v11.078c0 4.835 1.708 9.276 4.545 12.764-2.837 3.487-4.545 7.928-4.545 12.764v11.078c0 7.989 4.658 14.892 11.391 18.19-.889 2.279-1.396 4.748-1.396 7.338v11.078c0 11.173 9.09 20.264 20.264 20.264h13.684c1.046 19.907 17.57 35.781 37.733 35.781 20.162 0 36.686-15.875 37.732-35.781h13.684c11.174 0 20.264-9.09 20.264-20.264v-11.078c0-2.59-.507-5.059-1.396-7.338 6.732-3.298 11.391-10.201 11.391-18.19v-11.078c0-4.835-1.708-9.276-4.545-12.764 2.837-3.487 4.545-7.928 4.545-12.764v-11.078c0-6.494-3.083-12.269-7.848-15.979v-33.894c0-6.86 3.728-13.335 9.728-16.898 45.425-26.971 75.224-74.399 79.711-126.871.351-4.125-2.709-7.756-6.835-8.109zm-185.648 89.237c-2.105-2.726-3.265-6.124-3.265-9.569v-54.229h64.96v54.229c0 3.445-1.159 6.843-3.265 9.568l-10.733 13.896c-4.124 5.339-6.395 11.994-6.395 18.738v59.621h-24.175v-59.621c0-6.744-2.271-13.399-6.395-18.738zm29.215 237.852c-11.889 0-21.68-9.152-22.698-20.781h45.397c-1.018 11.628-10.809 20.781-22.699 20.781zm56.681-41.045c0 2.902-2.361 5.264-5.264 5.264-12.51 0-93.599 0-102.833 0-2.902 0-5.264-2.361-5.264-5.264v-11.078c0-2.902 2.361-5.264 5.264-5.264h102.833c2.902 0 5.264 2.361 5.264 5.264zm9.995-36.606c0 2.903-2.361 5.264-5.265 5.264-5.737 0-119.202 0-122.821 0-2.903 0-5.265-2.361-5.265-5.264v-11.078c0-2.902 2.361-5.264 5.265-5.264h122.821c2.903 0 5.265 2.361 5.265 5.264zm0-36.606c0 2.902-2.361 5.264-5.265 5.264h-122.821c-2.903 0-5.265-2.361-5.265-5.264v-11.078c0-2.987 2.506-5.264 5.265-5.264h122.821c2.88 0 5.265 2.382 5.265 5.264z" />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <h1
+                        class="text-6xl md:text-7xl lg:text-8xl leading-tight font-serif font-bold text-base-content text-center">
+                        Transform Your Insights to Thought Leadership
+                    </h1>
+                    <p class="text-xl md:text-2xl text-base-content w-full md:w-2/3 text-center">
+                        Alva: The AI platform that empowers knowledge-intensive companies to create complex,
+                        industry-specific content at scale.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Features Section -->
+    <div id="features" class="mx-4 lg:mx-24 my-24 justify-items-center border border-2 border-b-[6px] border-neutral p-32">
+        <h2 class="text-4xl font-bold text-center mb-8 text-base-content brightness-150 contrast-150">Why Choose
+            Alva?</h2>
+        <p class="text-center mb-12 text-lg text-base-content">Unlock the power of AI to produce high-quality,
+            industry-specific thought leadership content.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div class="card bg-primary shadow-s border border-neutral border-b-[6px] p-6 opacity-0 translate-y-4 duration-[2000ms] ease-out"
+                transition-ease>
+                <div class="card-body items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24" class="w-12 h-12 text-primary-content brightness-50 contrast-150">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    <h3 class="card-title text-primary-content brightness-50 contrast-150 text-2xl">Industry Expertise</h3>
+                    <p class="text-primary-content brightness-50 contrast-150">Generate content tailored to your specific industry knowledge and trends.</p>
+                </div>
+            </div>
+            <div class="card bg-error shadow-s border border-neutral border-b-[6px] p-6 opacity-0 translate-y-4 duration-[2000ms] delay-75 ease-out"
+                transition-ease>
+                <div class="card-body items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24" class="w-12 h-12 text-error-content brightness-50 contrast-150">
+                        <polyline points="17 11 12 6 7 11"></polyline>
+                        <polyline points="17 18 12 13 7 18"></polyline>
+                    </svg>
+                    <h3 class="card-title text-error-content brightness-50 contrast-150 text-2xl">Scale Your Content</h3>
+                    <p class="text-error-content brightness-50 contrast-150">Produce large volumes of high-quality content efficiently and consistently.</p>
+                </div>
+            </div>
+            <div class="card bg-info shadow-s border border-neutral border-b-[6px] p-6 opacity-0 translate-y-4 duration-[2000ms] delay-100 ease-out"
+                transition-ease>
+                <div class="card-body items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24" class="w-12 h-12 text-info-content brightness-50 contrast-150">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <h3 class="card-title text-info-content brightness-50 contrast-150 text-2xl">Customization</h3>
+                    <p class="text-info-content brightness-50 contrast-150">Adapt the AI to your company's unique voice and expertise.</p>
+                </div>
+            </div>
+            <div class="card bg-success shadow-s border border-neutral border-b-[6px] p-6 opacity-0 translate-y-4 duration-[2000ms] delay-200 ease-out"
+                transition-ease>
+                <div class="card-body items-center text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        viewBox="0 0 24 24" class="w-12 h-12 text-success-content brightness-50 contrast-150">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <h3 class="card-title text-success-content brightness-50 contrast-150 text-2xl">Time-Saving</h3>
+                    <p class="text-success-content brightness-50 contrast-150">Reduce content creation time while maintaining quality and relevance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="py-32 sm:-mx-6 lg:-mx-8 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-primary text-4xl font-bold text-center mb-20">What Our
+                Clients
+                Say</h2>
+            <div class="relative w-full overflow-hidden">
+                <div class="flex animate-[scroll_40s_linear_infinite] hover:[animation-play-state:paused]"
+                    style="--scroll-width: -100%;">
+                    <div class="flex-none w-[300px] mr-5 px-4">
+                        <div
+                            class="card bg-base-100 h-full flex flex-col border-2 border-primary border-b-[6px]">
+                            <div class="card-body flex flex-col justify-between">
+                                <div>
+                                    <p class="text-lg text-base-content">"Alva has
+                                        revolutionized our content strategy.
+                                        We're now producing in-depth industry analyses that truly showcase our
+                                        expertise."</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="font-bold text-base-content">Sarah Johnson
+                                    </p>
+                                    <p class="text-sm text-base-content">Chief Content
+                                        Officer at TechInsights</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] mr-5 px-4">
+                        <div
+                            class="card bg-base-100 h-full flex flex-col border-2 border-primary border-b-[6px]">
+                            <div class="card-body flex flex-col justify-between">
+                                <div>
+                                    <p class="text-lg text-base-content">"The level of
+                                        industry specific content Alva
+                                        produces is impressive. It's like having a team of expert writers at our
+                                        fingertips."</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="font-bold text-base-content">Michael Lee</p>
+                                    <p class="text-sm text-base-content">Director of
+                                        Marketing at FinTech Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-none w-[300px] mr-5 px-4">
+                        <div
+                            class="card bg-base-100 h-full flex flex-col border-2 border-primary border-b-[6px]">
+                            <div class="card-body flex flex-col justify-between">
+                                <div>
+                                    <p class="text-lg text-base-content">"Alva has helped
+                                        us maintain our position as
+                                        thought leaders in our industry. The content it generates is
+                                        consistently
+                                        high-quality and relevant."</p>
+                                </div>
+                                <div class="mt-4">
+                                    <p class="font-bold text-base-content">Emily Chen</p>
+                                    <p class="text-sm text-base-content">CEO of HealthTech
+                                        Innovations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Intro -->
+    <div class="hero mt-20">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h2 class="text-4xl font-bold text-base-content contrast-150 brightness-150">Ready to Elevate
+                    Your
+                    Thought Leadership?</h2>
+                <p class="py-6 text-base-content">Join the AI revolution in content creation. Let Alva help you
+                    produce complex, industry specific content that sets you apart from the competition.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Form -->
+    <div id="contact" class="card w-full border-2 border-primary border-b-[6px] max-w-md mx-auto mb-20 appear-transition">
+        <div class="card-body">
+            <h2 class="card-title text-2xl font-bold mb-6 justify-center text-base-content brightness-150 contrast-150">
+                Contact Us</h2>
+            <form id="contactForm" class="form-control w-full max-w-xs mx-auto">
+                <label class="label" for="name">
+                    <span class="label-text">Name</span>
+                </label>
+                <input type="text" id="name" name="name" required
+                    class="input input-bordered border-base-content w-full" />
+
+                <label class="label" for="email">
+                    <span class="label-text">Email</span>
+                </label>
+                <input type="email" id="email" name="email" required
+                    class="input input-bordered border-base-content w-full" />
+
+                <label class="label" for="message">
+                    <span class="label-text">Message</span>
+                </label>
+                <textarea id="message" name="message" required
+                    class="textarea textarea-bordered border-base-content h-24 w-full"></textarea>
+
+                <button type="submit" class="btn btn-primary mt-4 w-full">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="bg-base-200 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-8 text-base-content brightness-150 contrast-150">About
+                Our
+                Founder</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <div class="w-48 h-48 rounded-full overflow-hidden">
+                    <img src="founder.jpeg" alt="Outi Maria Pietilänaho" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-2/3 text-center md:text-left">
+                    <h3 class="text-2xl font-semibold mb-2 text-base-content brightness-150 contrast-150">Outi
+                        Maria
+                        Pietilänaho</h3>
+                    <p class="text-base-content mb-4">3X founder | Industry Leader | Forbes featured | Techstars
+                        '22
+                    </p>
+                    <p class="text-base-content">With a track record of success in tech entrepreneurship, Outi
+                        brings her expertise from founding Vimma, an app for content creators, and Fragrance By
+                        Me,
+                        a D2C e-commerce platform. Her innovative approach and deep industry knowledge drive
+                        Alva's
+                        mission to revolutionize thought leadership content creation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer p-10 bg-secondary text-base-content">
+        <div>
+            <a href="#" class="btn btn-ghost normal-case text-xl">
+                <span class="sr-only">Alva</span>
+                <img class="h-8 w-auto" src="alva_logo.webp" alt="Alva Logo">
+            </a>
+            <p>Alva AI Ltd.<br>Transforming Industry Insights Since 2024</p>
+        </div>
+        <div>
+            <span class="footer-title">Services</span>
+            <a class="link link-hover">Content Creation</a>
+            <a class="link link-hover">Industry Analysis</a>
+            <a class="link link-hover">Thought Leadership</a>
+            <a class="link link-hover">AI Consultation</a>
+        </div>
+        <div>
+            <span class="footer-title">Company</span>
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </div>
+        <div>
+            <span class="footer-title">Legal</span>
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+        </div>
+    </footer>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const video = document.getElementById('hero-video');
+            if (video) {
+                video.play().catch(error => {
+                    console.error("Auto-play was prevented:", error);
+                    // You might want to show a play button here if autoplay fails
+                });
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('opacity-0', 'translate-y-4');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('[transition-ease]').forEach((element) => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const testimonialScroll = document.querySelector('.animate-\\[scroll_40s_linear_infinite\\]');
+            const originalContent = testimonialScroll.innerHTML;
+            testimonialScroll.innerHTML += originalContent;
+
+            // Calculate the correct scroll width
+            const scrollWidth = -testimonialScroll.scrollWidth / 2;
+            testimonialScroll.style.setProperty('--scroll-width', `${scrollWidth}px`);
+        });
+    </script>
+    <!-- Features appear on scroll script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const featuresSection = document.getElementById('features');
+            const featureCards = featuresSection.querySelectorAll('.feature-card');
+            const totalFeatures = featureCards.length;
+            const heroSection = document.getElementById('hero');
+
+            function updateFeaturePositions() {
+                const featuresRect = featuresSection.getBoundingClientRect();
+                const heroRect = heroSection.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+
+                // Calculate scroll progress
+                const scrollProgress = Math.max(0, Math.min(1, -heroRect.bottom / (featuresRect.height - viewportHeight)));
+
+                featureCards.forEach((card, index) => {
+                    // Calculate the ideal position for each card
+                    const idealPosition = index * viewportHeight - scrollProgress * (totalFeatures - 1) * viewportHeight;
+
+                    // Apply some parallax effect
+                    const parallaxFactor = 1 - (index / totalFeatures) * 0.5; // Cards higher up move slower
+                    const actualPosition = idealPosition * parallaxFactor;
+
+                    // Set the position
+                    card.style.top = `${actualPosition}px`;
+
+                    // Adjust opacity for fade effect
+                    const opacity = Math.max(0, Math.min(1, 1 - Math.abs(actualPosition) / (viewportHeight / 2)));
+                    card.style.opacity = opacity;
+                });
+            }
+
+            window.addEventListener('scroll', updateFeaturePositions);
+            window.addEventListener('resize', updateFeaturePositions);
+            updateFeaturePositions(); // Initial call to set the correct state on page load
+        });
+    </script>
+</body>
+
+</html>
