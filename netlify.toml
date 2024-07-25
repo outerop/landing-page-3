@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+
+[[redirects]]
+  from = "/*"
+  to = "/alva.html"
+  status = 200
